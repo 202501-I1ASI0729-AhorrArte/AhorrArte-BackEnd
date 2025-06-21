@@ -11,6 +11,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar
 
 # IDE
 .idea
@@ -29,6 +30,7 @@ Thumbs.db
 *.jar
 *.war
 *.ear
+!target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar
 
 # Security
 *.key

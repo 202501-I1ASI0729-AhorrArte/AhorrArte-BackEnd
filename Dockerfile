@@ -1,5 +1,5 @@
 # Multi-stage build for better performance
-FROM openjdk:21-jdk-slim as builder
+FROM eclipse-temurin:21-jdk-jammy as builder
 
 # Set working directory
 WORKDIR /app
@@ -23,7 +23,7 @@ COPY src src
 RUN ./mvnw clean package -DskipTests
 
 # Production stage
-FROM openjdk:21-jre-slim
+FROM eclipse-temurin:21-jre-jammy
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
