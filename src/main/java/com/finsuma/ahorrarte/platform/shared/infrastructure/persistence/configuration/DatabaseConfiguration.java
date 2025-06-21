@@ -18,9 +18,11 @@ public class DatabaseConfiguration {
 
     @Bean
     @Primary
-    @ConditionalOnProperty(name = "DATABASE_URL")
+    @ConditionalOnProperty(name = "DATABASE_URL", matchIfMissing = false)
     public DataSource dataSource() {
         try {
+            System.out.println("Configuring DataSource from DATABASE_URL: " + databaseUrl);
+            
             // Parse the DATABASE_URL from Render (format: postgresql://user:pass@host:port/db)
             URI dbUri = new URI(databaseUrl);
             
@@ -47,6 +49,8 @@ public class DatabaseConfiguration {
                     .build();
         } catch (Exception e) {
             System.err.println("Failed to parse DATABASE_URL: " + databaseUrl);
+            System.err.println("Error: " + e.getMessage());
+            e.printStackTrace();
             throw new RuntimeException("Failed to configure database from DATABASE_URL: " + databaseUrl, e);
         }
     }

@@ -50,4 +50,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
 ENV JAVA_OPTS="-Xmx512m -Xms256m -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
 
 # Run the application with preview features enabled
-CMD ["sh", "-c", "java --enable-preview $JAVA_OPTS -Dserver.port=$PORT -Dspring.profiles.active=prod -jar app.jar"]
+CMD ["sh", "-c", "echo 'Starting application with PORT='$PORT && java --enable-preview $JAVA_OPTS -Dserver.port=$PORT -Dserver.address=0.0.0.0 -Dspring.profiles.active=prod -jar app.jar"]
