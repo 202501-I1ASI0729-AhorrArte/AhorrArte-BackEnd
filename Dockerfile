@@ -42,9 +42,9 @@ USER app
 # Expose port
 EXPOSE 8080
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
-    CMD curl -f http://localhost:8080/actuator/health || exit 1
+# Health check - Remove the health check as Render handles this differently
+# HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
+#     CMD curl -f http://localhost:8080/actuator/health || exit 1
 
 # Set JVM options for container
 ENV JAVA_OPTS="-Xmx512m -Xms256m -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
