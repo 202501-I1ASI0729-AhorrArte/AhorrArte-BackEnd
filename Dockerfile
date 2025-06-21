@@ -1,26 +1,20 @@
 # Multi-stage build for better performance
-FROM eclipse-temurin:21-jdk-jammy as builder
+FROM maven:3.9.6-eclipse-temurin-21 as builder
 
 # Set working directory
 WORKDIR /app
 
-# Copy maven wrapper and pom.xml
-COPY mvnw .
-COPY mvnw.cmd .
-COPY .mvn .mvn
+# Copy pom.xml first for better layer caching
 COPY pom.xml .
 
-# Make maven wrapper executable
-RUN chmod +x ./mvnw
-
-# Download dependencies (this layer will be cached)
-RUN ./mvnw dependency:go-offline -B
+# Download dependencies (this layer will be cached if pom.xml doesn't change)
+RUN mvn dependency:go-offline -B
 
 # Copy source code
 COPY src src
 
 # Build the application
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Production stage
 FROM eclipse-temurin:21-jre-jammy
