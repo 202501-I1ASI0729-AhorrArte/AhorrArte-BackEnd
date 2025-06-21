@@ -10,9 +10,11 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 import java.net.URI;
 
-@Configuration
+// @Configuration - Temporarily disabled to use application.properties directly
 public class DatabaseConfiguration {
 
+    // Commented out to use standard Spring Boot datasource configuration
+    /*
     @Value("${DATABASE_URL:}")
     private String databaseUrl;
 
@@ -50,8 +52,8 @@ public class DatabaseConfiguration {
         } catch (Exception e) {
             System.err.println("Failed to parse DATABASE_URL: " + databaseUrl);
             System.err.println("Error: " + e.getMessage());
-            e.printStackTrace();
-            throw new RuntimeException("Failed to configure database from DATABASE_URL: " + databaseUrl, e);
+            e.printStackTrace();            throw new RuntimeException("Failed to configure database from DATABASE_URL: " + databaseUrl, e);
         }
     }
+    */
 }
