@@ -1,0 +1,11 @@
+version: 2
+build:
+  commands:
+    - echo "Starting AhorrArte build process..."
+    - chmod +x ./mvnw
+    - chmod +x ./build.sh
+    - chmod +x ./start.sh
+    - ./mvnw clean package -DskipTests -q
+    - echo "Build completed successfully"
+start:
+  command: ./start.sh
