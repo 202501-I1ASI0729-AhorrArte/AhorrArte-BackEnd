@@ -1,24 +1,15 @@
-# Use Eclipse Temurin JDK 17 as base image
-FROM eclipse-temurin:17-jdk-alpine AS build
+# Use Maven with JDK 21 for build stage
+FROM maven:3.9-eclipse-temurin-21 AS build
 
 # Set working directory
 WORKDIR /app
 
-# Copy Maven wrapper and pom.xml
-COPY .mvn/ .mvn/
-COPY mvnw pom.xml ./
-
-# Make mvnw executable
-RUN chmod +x ./mvnw
-
-# Download dependencies
-RUN ./mvnw dependency:go-offline -B
-
-# Copy source code
+# Copy pom.xml and source code
+COPY pom.xml ./
 COPY src ./src
 
 # Build the application
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Runtime stage - Java 21 for preview features
 FROM eclipse-temurin:21-jre-jammy
