@@ -1,5 +1,5 @@
-# Use Maven image for build stage (using stable version)
-FROM maven:3.9-openjdk-21 AS build
+# Use Maven image for build stage (using Eclipse Temurin)
+FROM maven:3.9-eclipse-temurin-21 AS build
 
 # Set working directory
 WORKDIR /app
@@ -16,8 +16,8 @@ COPY src ./src
 # Build the application
 RUN mvn clean package -DskipTests -B
 
-# Use OpenJDK for runtime (using stable version)
-FROM openjdk:21-jre-slim
+# Use Eclipse Temurin for runtime (recommended replacement for OpenJDK)
+FROM eclipse-temurin:21-jre-alpine
 
 # Set working directory
 WORKDIR /app
