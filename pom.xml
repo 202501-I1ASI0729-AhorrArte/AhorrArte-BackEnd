@@ -82,10 +82,13 @@
             <artifactId>pluralize</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!-- Spring Security temporarily disabled
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        -->
+        <!-- JWT dependencies temporarily disabled
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -102,6 +105,7 @@
             <version>0.12.6</version>
             <scope>runtime</scope>
         </dependency>
+        -->
     </dependencies>
 
     <build>
