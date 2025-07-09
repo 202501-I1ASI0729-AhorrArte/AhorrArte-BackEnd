@@ -126,10 +126,8 @@ public class WebSecurityConfiguration {
                                 "/api/v1/inflation-report/**",
                                 "/",
                                 "/error",
-                                "/favicon.ico").permitAll()
-                        .requestMatchers("/api/v1/user-context/**").authenticated()
-                        .requestMatchers("/api/v1/user-transaction/**").authenticated()
-                        .requestMatchers("/api/v1/user-inflation/**").authenticated()
+                                "/favicon.ico",
+                                "/**").permitAll()
                         .anyRequest().permitAll());
         http.authenticationProvider(authenticationProvider());
         http.addFilterBefore(authorizationRequestFilter(), UsernamePasswordAuthenticationFilter.class);
