@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.finantialData.domain.model;
+package com.FinSuma.AhorrArte.platform.finantialData.domain.model;
 
 import jakarta.persistence.*;
 
@@ -79,3 +79,4 @@ public class FinantialData {
         this.descripcion = descripcion;
     }
 }
+

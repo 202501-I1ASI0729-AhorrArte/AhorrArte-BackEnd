@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.commandservices;
+package com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.commandservices;
 
-import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
-import com.finsuma.ahorrarte.platform.finantialEducation.infrastructure.persistence.jpa.FinantialEducationRepository;
+import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
+import com.FinSuma.AhorrArte.platform.finantialEducation.infrastructure.persistence.jpa.FinantialEducationRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,3 +21,4 @@ public class FinantialEducationCommandService {
         repository.deleteById(id);
     }
 }
+

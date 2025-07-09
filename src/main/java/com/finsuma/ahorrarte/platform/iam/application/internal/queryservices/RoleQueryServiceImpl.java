@@ -1,10 +1,10 @@
-package com.finsuma.ahorrarte.platform.iam.application.internal.queryservices;
+package com.FinSuma.AhorrArte.platform.iam.application.internal.queryservices;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
-import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetAllRolesQuery;
-import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetRolesByNameQuery;
-import com.finsuma.ahorrarte.platform.iam.domain.services.RoleQueryService;
-import com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories.RoleRepository;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetAllRolesQuery;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetRolesByNameQuery;
+import com.FinSuma.AhorrArte.platform.iam.domain.services.RoleQueryService;
+import com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories.RoleRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,3 +30,4 @@ public class RoleQueryServiceImpl implements RoleQueryService {
         return roleRepository.findByName(query.name());
     }
 }
+

@@ -1,10 +1,11 @@
-package com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignInCommand;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.SignInResource;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignInCommand;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.SignInResource;
 
 public class SignInCommandFromResourceAssembler {
     public static SignInCommand toCommandFromResource(SignInResource signInResource) {
         return new SignInCommand(signInResource.username(), signInResource.password());
     }
 }
+

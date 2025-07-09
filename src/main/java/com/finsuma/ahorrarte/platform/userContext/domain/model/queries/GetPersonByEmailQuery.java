@@ -1,6 +1,7 @@
-package com.finsuma.ahorrarte.platform.userContext.domain.model.queries;
+package com.FinSuma.AhorrArte.platform.userContext.domain.model.queries;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects.EmailAddress;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects.EmailAddress;
 
 public record GetPersonByEmailQuery(EmailAddress emailAddress) {
 }
+

@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.pipeline;
+package com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.pipeline;
 
-import com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.model.UsernamePasswordAuthenticationTokenBuilder;
-import com.finsuma.ahorrarte.platform.iam.infrastructure.tokens.jwt.BearerTokenService;
+import com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.model.UsernamePasswordAuthenticationTokenBuilder;
+import com.FinSuma.AhorrArte.platform.iam.infrastructure.tokens.jwt.BearerTokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -63,3 +63,4 @@ public class BearerAuthorizationRequestFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 }
+

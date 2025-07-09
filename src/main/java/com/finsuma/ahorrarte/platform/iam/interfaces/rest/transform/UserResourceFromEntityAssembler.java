@@ -1,8 +1,8 @@
-package com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.aggregates.User;
-import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.UserResource;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates.User;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.UserResource;
 
 public class UserResourceFromEntityAssembler {
     public static UserResource toResourceFromEntity(User user) {
@@ -10,3 +10,4 @@ public class UserResourceFromEntityAssembler {
         return new UserResource(user.getId(), user.getUsername(), roles);
     }
 }
+

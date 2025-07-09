@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.iam.domain.model.aggregates;
+package com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
-import com.finsuma.ahorrarte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
+import com.FinSuma.AhorrArte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "users")
 @Getter
 @Setter
 public class User extends AuditableAbstractAggregateRoot<User> {
@@ -55,5 +54,25 @@ public class User extends AuditableAbstractAggregateRoot<User> {
         return this;
     }
 
-    public User() { this.roles = new HashSet<>(); }
+    public User() { 
+        this.roles = new HashSet<>(); 
+    }
+
+    // Additional getters for compatibility
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+    
+    public Long getId() {
+        return id;
+    }
 }
+

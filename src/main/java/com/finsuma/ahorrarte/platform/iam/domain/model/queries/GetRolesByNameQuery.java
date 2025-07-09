@@ -1,6 +1,7 @@
-package com.finsuma.ahorrarte.platform.iam.domain.model.queries;
+package com.FinSuma.AhorrArte.platform.iam.domain.model.queries;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.valueobjects.Roles;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.valueobjects.Roles;
 
 public record GetRolesByNameQuery(Roles name) {
 }
+

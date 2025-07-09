@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform;
+package com.FinSuma.AhorrArte.platform;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

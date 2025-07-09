@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.shared.interfaces.rest.resources;
+package com.FinSuma.AhorrArte.platform.shared.interfaces.rest.resources;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategy;
@@ -50,3 +50,4 @@ public class SnakeCaseWithPluralizedTablePhysicalNamingStrategy implements Physi
         return Identifier.toIdentifier(newName);
     }
 }
+

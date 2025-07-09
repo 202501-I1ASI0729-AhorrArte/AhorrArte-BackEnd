@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userTransaction.domain.model.valueobjects;
+package com.FinSuma.AhorrArte.platform.userTransaction.domain.model.valueobjects;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.Embeddable;
@@ -28,3 +28,4 @@ public class TransactionAmount {
         this.value = value;
     }
 }
+

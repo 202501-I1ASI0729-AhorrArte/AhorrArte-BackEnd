@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.shared.infrastructure.documentation.openapi.configuration;
+package com.FinSuma.AhorrArte.platform.shared.infrastructure.documentation.openapi.configuration;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.ExternalDocumentation;
@@ -25,7 +25,7 @@ public class OpenApiConfiguration {
                                 .url("https://www.apache.org/licenses/LICENSE-2.0.html")))
                 .externalDocs(new ExternalDocumentation()
                         .description("FinSuma AhorrArte Platform Wiki Documentation")
-                        .url("https://upecinosai-AhorrArte-platform.wiki.github.io/docs"));
+                        .url("https://FinSuma-AhorrArte-platform.wiki.github.io/docs"));
 
         final String securitySchemeName = "bearerAuth";
 
@@ -42,3 +42,4 @@ public class OpenApiConfiguration {
         return openApi;
     }
 }
+

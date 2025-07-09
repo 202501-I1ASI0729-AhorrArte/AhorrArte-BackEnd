@@ -1,6 +1,6 @@
-package com.finsuma.ahorrarte.platform.userTransaction.domain.model.commands;
+package com.FinSuma.AhorrArte.platform.userTransaction.domain.model.commands;
 
-import com.finsuma.ahorrarte.platform.userTransaction.domain.model.valueobjects.TransactionAmount;
+import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.valueobjects.TransactionAmount;
 
 import java.util.Date;
 
@@ -34,3 +34,4 @@ public class CreateTransactionCommand {
         return category;
     }
 }
+

@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.userContext.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.commands.CreatePersonCommand;
-import com.finsuma.ahorrarte.platform.userContext.interfaces.rest.resources.CreatePersonResource;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.commands.CreatePersonCommand;
+import com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.resources.CreatePersonResource;
 
 public class CreatePersonCommandFromResourceAssembler {
     public static CreatePersonCommand toCommandFromResource(CreatePersonResource resource) {
@@ -13,3 +13,4 @@ public class CreatePersonCommandFromResourceAssembler {
                 resource.number());
     }
 }
+

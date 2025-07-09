@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.finantialData.interfaces.rest.resources;
+package com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest.resources;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -62,3 +62,4 @@ public class FinantialDataResource {
         this.descripcion = descripcion;
     }
 }
+

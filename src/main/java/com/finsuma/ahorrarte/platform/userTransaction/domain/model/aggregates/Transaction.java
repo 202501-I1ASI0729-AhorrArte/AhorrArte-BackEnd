@@ -1,8 +1,8 @@
-package com.finsuma.ahorrarte.platform.userTransaction.domain.model.aggregates;
+package com.FinSuma.AhorrArte.platform.userTransaction.domain.model.aggregates;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.finsuma.ahorrarte.platform.userTransaction.domain.model.valueobjects.TransactionAmount;
+import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.valueobjects.TransactionAmount;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -96,3 +96,4 @@ public class Transaction {
         this.userId = userId;
     }
 }
+

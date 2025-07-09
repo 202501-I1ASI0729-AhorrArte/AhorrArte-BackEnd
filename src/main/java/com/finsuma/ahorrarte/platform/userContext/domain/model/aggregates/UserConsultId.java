@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates;
+package com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates;
 
 import jakarta.persistence.Column;
 
@@ -41,3 +41,4 @@ public class UserConsultId {
         return Objects.hash(userId, consultId);
     }
 }
+

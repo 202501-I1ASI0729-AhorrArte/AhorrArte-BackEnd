@@ -1,8 +1,8 @@
-package com.finsuma.ahorrarte.platform.userContext.interfaces.rest;
+package com.FinSuma.AhorrArte.platform.userContext.interfaces.rest;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates.UserConsult;
-import com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates.UserConsultId;
-import com.finsuma.ahorrarte.platform.userContext.infrastructure.persistence.jpa.repositories.UserConsultRepository;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates.UserConsult;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates.UserConsultId;
+import com.FinSuma.AhorrArte.platform.userContext.infrastructure.persistence.jpa.repositories.UserConsultRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -51,3 +51,4 @@ public class UserConsultController {
         return ResponseEntity.noContent().build();
     }
 }
+

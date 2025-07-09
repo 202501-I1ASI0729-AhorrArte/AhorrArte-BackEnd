@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.finantialData.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.finantialData.domain.model.FinantialData;
-import com.finsuma.ahorrarte.platform.finantialData.interfaces.rest.resources.FinantialDataResource;
+import com.FinSuma.AhorrArte.platform.finantialData.domain.model.FinantialData;
+import com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest.resources.FinantialDataResource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,3 +17,4 @@ public class CreateFinantialDataCommandFromResourceAssembler {
         return finantialData;
     }
 }
+

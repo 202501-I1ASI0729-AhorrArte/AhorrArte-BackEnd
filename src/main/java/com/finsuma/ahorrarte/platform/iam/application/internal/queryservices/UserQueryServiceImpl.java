@@ -1,11 +1,11 @@
-package com.finsuma.ahorrarte.platform.iam.application.internal.queryservices;
+package com.FinSuma.AhorrArte.platform.iam.application.internal.queryservices;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.aggregates.User;
-import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetAllUsersQuery;
-import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetUserByIdQuery;
-import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetUserByUsernameQuery;
-import com.finsuma.ahorrarte.platform.iam.domain.services.UserQueryService;
-import com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories.UserRepository;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates.User;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetAllUsersQuery;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetUserByIdQuery;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetUserByUsernameQuery;
+import com.FinSuma.AhorrArte.platform.iam.domain.services.UserQueryService;
+import com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,3 +35,4 @@ public class UserQueryServiceImpl implements UserQueryService {
         return userRepository.findByUsername(query.username());
     }
 }
+

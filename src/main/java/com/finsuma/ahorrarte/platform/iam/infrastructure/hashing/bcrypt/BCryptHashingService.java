@@ -1,6 +1,6 @@
-package com.finsuma.ahorrarte.platform.iam.infrastructure.hashing.bcrypt;
+package com.FinSuma.AhorrArte.platform.iam.infrastructure.hashing.bcrypt;
 
-import com.finsuma.ahorrarte.platform.iam.application.internal.outboundservices.hashingService.HashingService;
+import com.FinSuma.AhorrArte.platform.iam.application.internal.outboundservices.hashingService.HashingService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
@@ -11,3 +11,4 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public interface BCryptHashingService extends HashingService, PasswordEncoder {
 
 }
+

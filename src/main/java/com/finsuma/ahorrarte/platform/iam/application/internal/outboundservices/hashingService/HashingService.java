@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.iam.application.internal.outboundservices.hashingService;
+package com.FinSuma.AhorrArte.platform.iam.application.internal.outboundservices.hashingService;
 
 /**
  * HashingService interface
@@ -21,3 +21,4 @@ public interface HashingService {
      */
     boolean matches(CharSequence rawPassword, String encodedPassword);
 }
+

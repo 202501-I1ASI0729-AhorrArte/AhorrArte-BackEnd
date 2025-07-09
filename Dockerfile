@@ -1,53 +1,50 @@
-# Multi-stage build for better performance
-FROM maven:3.9.6-eclipse-temurin-21 as builder
+# Use Eclipse Temurin JDK 17 as base image
+FROM eclipse-temurin:17-jdk-alpine AS build
 
 # Set working directory
 WORKDIR /app
 
-# Copy pom.xml first for better layer caching
-COPY pom.xml .
+# Copy Maven wrapper and pom.xml
+COPY .mvn/ .mvn/
+COPY mvnw pom.xml ./
 
-# Download dependencies (this layer will be cached if pom.xml doesn't change)
-RUN mvn dependency:go-offline -B
+# Make mvnw executable
+RUN chmod +x ./mvnw
+
+# Download dependencies
+RUN ./mvnw dependency:go-offline -B
 
 # Copy source code
-COPY src src
+COPY src ./src
 
 # Build the application
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
-# Production stage
-FROM eclipse-temurin:21-jre-jammy
+# Runtime stage
+FROM eclipse-temurin:17-jre-alpine
 
-# Install necessary packages
-RUN apt-get update && apt-get install -y \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
-
-# Create app user
-RUN addgroup --system app && adduser --system --group app
-
-# Set working directory
 WORKDIR /app
 
-# Copy the jar from builder stage
-COPY --from=builder /app/target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar app.jar
+# Install curl for health checks
+RUN apk add --no-cache curl
 
-# Change ownership
-RUN chown app:app app.jar
+# Copy the jar from build stage
+COPY --from=build /app/target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar app.jar
 
-# Switch to app user
-USER app
+# Create non-root user
+RUN addgroup -g 1001 -S spring && \
+    adduser -S spring -u 1001
+
+# Change ownership of the app directory
+RUN chown -R spring:spring /app
+USER spring:spring
 
 # Expose port
 EXPOSE 8080
 
-# Health check - Remove the health check as Render handles this differently
-# HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
-#     CMD curl -f http://localhost:8080/actuator/health || exit 1
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:8080/actuator/health || exit 1
 
-# Set JVM options for container
-ENV JAVA_OPTS="-Xmx512m -Xms256m -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
-
-# Run the application with preview features enabled
-CMD ["sh", "-c", "echo 'Starting application with PORT='$PORT && java --enable-preview $JAVA_OPTS -Dserver.port=$PORT -Dserver.address=0.0.0.0 -Dspring.profiles.active=prod -jar app.jar"]
+# Run the application
+ENTRYPOINT ["java", "-jar", "app.jar"]

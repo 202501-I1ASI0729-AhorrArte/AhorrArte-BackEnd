@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.shared.domain.model.aggregates;
+package com.FinSuma.AhorrArte.platform.shared.domain.model.aggregates;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,7 +16,7 @@ public class AuditableAbstractAggregateRoot<T extends AbstractAggregateRoot<T>> 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    protected Long id;
 
     @CreatedDate
     @Column(nullable = true, updatable = false)
@@ -27,4 +27,9 @@ public class AuditableAbstractAggregateRoot<T extends AbstractAggregateRoot<T>> 
     private Date updatedAt;
 
     public void addDomainEvent(Object event) { super.registerEvent(event); }
+    
+    public Long getId() {
+        return id;
+    }
 }
+

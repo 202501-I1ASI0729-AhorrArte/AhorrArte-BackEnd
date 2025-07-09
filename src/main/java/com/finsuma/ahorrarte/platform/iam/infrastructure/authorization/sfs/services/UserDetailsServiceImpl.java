@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.services;
+package com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.services;
 
-import com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.model.UserDetailsImpl;
-import com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories.UserRepository;
+import com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.model.UserDetailsImpl;
+import com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -33,3 +33,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return UserDetailsImpl.build(user);
     }
 }
+

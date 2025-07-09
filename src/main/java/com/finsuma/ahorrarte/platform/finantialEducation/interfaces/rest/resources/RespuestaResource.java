@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest.resources;
+package com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest.resources;
 
 public class RespuestaResource {
 
@@ -23,3 +23,4 @@ public class RespuestaResource {
         this.texto = texto;
     }
 }
+

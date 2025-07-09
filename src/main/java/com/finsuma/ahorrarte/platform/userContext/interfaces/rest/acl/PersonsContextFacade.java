@@ -1,10 +1,10 @@
-package com.finsuma.ahorrarte.platform.userContext.interfaces.rest.acl;
+package com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.acl;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.commands.CreatePersonCommand;
-import com.finsuma.ahorrarte.platform.userContext.domain.model.queries.GetPersonByEmailQuery;
-import com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects.EmailAddress;
-import com.finsuma.ahorrarte.platform.userContext.domain.services.PersonCommandService;
-import com.finsuma.ahorrarte.platform.userContext.domain.services.PersonQueryService;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.commands.CreatePersonCommand;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.queries.GetPersonByEmailQuery;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects.EmailAddress;
+import com.FinSuma.AhorrArte.platform.userContext.domain.services.PersonCommandService;
+import com.FinSuma.AhorrArte.platform.userContext.domain.services.PersonQueryService;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,3 +31,4 @@ public class PersonsContextFacade {
         return person.get().getId();
     }
 }
+

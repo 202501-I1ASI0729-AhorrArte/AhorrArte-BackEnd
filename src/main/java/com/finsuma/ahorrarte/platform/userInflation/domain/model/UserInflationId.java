@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userInflation.domain.model;
+package com.FinSuma.AhorrArte.platform.userInflation.domain.model;
 
 
 import jakarta.persistence.Column;
@@ -54,3 +54,4 @@ public class UserInflationId implements Serializable {
         return Objects.hash(userId, reportId);
     }
 }
+

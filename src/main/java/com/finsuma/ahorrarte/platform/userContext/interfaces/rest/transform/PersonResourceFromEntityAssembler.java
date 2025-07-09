@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.userContext.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates.Person;
-import com.finsuma.ahorrarte.platform.userContext.interfaces.rest.resources.PersonResource;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates.Person;
+import com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.resources.PersonResource;
 
 public class PersonResourceFromEntityAssembler {
     public static PersonResource toResourceFromEntity(Person entity) {
@@ -12,3 +12,4 @@ public class PersonResourceFromEntityAssembler {
                 entity.getStreetAddress());
     }
 }
+

@@ -1,6 +1,6 @@
-package com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates;
+package com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.entities.ConsultaAsesoria;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.entities.ConsultaAsesoria;
 import jakarta.persistence.*;
 
 @Entity
@@ -47,3 +47,4 @@ public class UserConsult {
         return id.hashCode();
     }
 }
+

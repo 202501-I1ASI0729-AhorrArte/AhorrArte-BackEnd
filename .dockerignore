@@ -1,37 +1,40 @@
-# Git
+# Ignore Git files
 .git
 .gitignore
 
-# Documentation
-README.md
-README.md.txt
+# Ignore IDE files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
 
-# Maven
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-!target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar
-
-# IDE
-.idea
-.vscode
-*.swp
-*.swo
-
-# OS
+# Ignore OS files
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-
-# Runtime
-*.jar
-*.war
-*.ear
+# Ignore build outputs
+target/
 !target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar
 
-# Security
-*.key
-*.pem
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore documentation
+README.md
+docs/
+
+# Ignore Maven local repository
+.m2/
+
+# Ignore Node modules if any
+node_modules/
+
+# Ignore environment files
+.env
+.env.local
+.env.production

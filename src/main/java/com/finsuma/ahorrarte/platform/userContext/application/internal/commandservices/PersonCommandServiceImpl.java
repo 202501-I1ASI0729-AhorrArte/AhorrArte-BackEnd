@@ -1,10 +1,10 @@
-package com.finsuma.ahorrarte.platform.userContext.application.internal.commandservices;
+package com.FinSuma.AhorrArte.platform.userContext.application.internal.commandservices;
 
-import com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates.Person;
-import com.finsuma.ahorrarte.platform.userContext.domain.model.commands.CreatePersonCommand;
-import com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects.EmailAddress;
-import com.finsuma.ahorrarte.platform.userContext.domain.services.PersonCommandService;
-import com.finsuma.ahorrarte.platform.userContext.infrastructure.persistence.jpa.repositories.PersonRepository;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates.Person;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.commands.CreatePersonCommand;
+import com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects.EmailAddress;
+import com.FinSuma.AhorrArte.platform.userContext.domain.services.PersonCommandService;
+import com.FinSuma.AhorrArte.platform.userContext.infrastructure.persistence.jpa.repositories.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -27,3 +27,4 @@ public class PersonCommandServiceImpl implements PersonCommandService {
         return Optional.of(person);
     }
 }
+

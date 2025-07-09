@@ -1,9 +1,9 @@
-package com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
-import com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest.resources.FinantialEducationResource;
-import com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest.resources.PreguntaResource;
-import com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest.resources.RespuestaResource;
+import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
+import com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest.resources.FinantialEducationResource;
+import com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest.resources.PreguntaResource;
+import com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest.resources.RespuestaResource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -27,3 +27,4 @@ public class FinantialEducationResourceFromEntityAssembler {
         return resource;
     }
 }
+

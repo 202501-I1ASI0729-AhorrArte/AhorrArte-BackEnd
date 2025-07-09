@@ -1,4 +1,5 @@
-package com.finsuma.ahorrarte.platform.userContext.domain.model.queries;
+package com.FinSuma.AhorrArte.platform.userContext.domain.model.queries;
 
 public record GetAllConsultasAsesoriasQuery() {
 }
+

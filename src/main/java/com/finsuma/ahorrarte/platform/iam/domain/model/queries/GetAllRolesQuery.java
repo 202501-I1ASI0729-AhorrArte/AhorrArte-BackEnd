@@ -1,4 +1,5 @@
-package com.finsuma.ahorrarte.platform.iam.domain.model.queries;
+package com.FinSuma.AhorrArte.platform.iam.domain.model.queries;
 
 public record GetAllRolesQuery() {
 }
+

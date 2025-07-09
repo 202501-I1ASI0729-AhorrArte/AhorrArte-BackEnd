@@ -1,7 +1,7 @@
-package com.finsuma.ahorrarte.platform.userTransaction.application.internal.queryservices;
+package com.FinSuma.AhorrArte.platform.userTransaction.application.internal.queryservices;
 
-import com.finsuma.ahorrarte.platform.userTransaction.domain.model.aggregates.Transaction;
-import com.finsuma.ahorrarte.platform.userTransaction.infrastructure.persistence.jpa.repositories.TransactionRepository;
+import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.aggregates.Transaction;
+import com.FinSuma.AhorrArte.platform.userTransaction.infrastructure.persistence.jpa.repositories.TransactionRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,3 +18,4 @@ public class TransactionQueryServiceImpl {
         return transactionRepository.findByUserId(userId);
     }
 }
+

@@ -1,11 +1,11 @@
-package com.finsuma.ahorrarte.platform.userTransaction.interfaces.rest;
+package com.FinSuma.AhorrArte.platform.userTransaction.interfaces.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.finsuma.ahorrarte.platform.userTransaction.domain.model.aggregates.Transaction;
-import com.finsuma.ahorrarte.platform.userTransaction.application.internal.commandservices.TransactionCommandServiceImpl;
-import com.finsuma.ahorrarte.platform.userTransaction.application.internal.queryservices.TransactionQueryServiceImpl;
+import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.aggregates.Transaction;
+import com.FinSuma.AhorrArte.platform.userTransaction.application.internal.commandservices.TransactionCommandServiceImpl;
+import com.FinSuma.AhorrArte.platform.userTransaction.application.internal.queryservices.TransactionQueryServiceImpl;
 
 import java.util.List;
 
@@ -39,3 +39,4 @@ public class UserTransactionController {
         return new ResponseEntity<>(transactions, HttpStatus.OK); // Retorna la lista de transacciones con código 200
     }
 }
+

@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userInflation.domain.model;
+package com.FinSuma.AhorrArte.platform.userInflation.domain.model;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -25,3 +25,4 @@ public class UserInflation {
         this.id = id;
     }
 }
+

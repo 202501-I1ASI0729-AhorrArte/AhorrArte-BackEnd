@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.model;
+package com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.model;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -25,3 +25,4 @@ public class UsernamePasswordAuthenticationTokenBuilder {
         return usernamePasswordAuthenticationToken;
     }
 }
+

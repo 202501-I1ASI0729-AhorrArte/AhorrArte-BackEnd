@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userContext.domain.model.commands;
+package com.FinSuma.AhorrArte.platform.userContext.domain.model.commands;
 
 public record CreatePersonCommand(String firstName,
                                   String lastName,
@@ -6,3 +6,4 @@ public record CreatePersonCommand(String firstName,
                                   String street,
                                   String number) {
 }
+

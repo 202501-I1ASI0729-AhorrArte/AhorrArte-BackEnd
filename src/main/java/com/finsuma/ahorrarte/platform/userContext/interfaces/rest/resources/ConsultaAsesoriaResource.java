@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userContext.interfaces.rest.resources;
+package com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.resources;
 
 import java.time.LocalDate;
 
@@ -8,3 +8,4 @@ public record ConsultaAsesoriaResource(
         LocalDate fechaConsulta,
         String resultado
 ) {}
+

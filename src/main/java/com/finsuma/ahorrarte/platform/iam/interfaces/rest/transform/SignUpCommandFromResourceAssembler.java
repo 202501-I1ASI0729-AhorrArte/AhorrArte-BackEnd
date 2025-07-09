@@ -1,8 +1,8 @@
-package com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform;
+package com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform;
 
-import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignUpCommand;
-import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.SignUpResource;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignUpCommand;
+import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.SignUpResource;
 
 import java.util.ArrayList;
 
@@ -12,3 +12,4 @@ public class SignUpCommandFromResourceAssembler {
         return new SignUpCommand(resource.username(), resource.password(), roles);
     }
 }
+

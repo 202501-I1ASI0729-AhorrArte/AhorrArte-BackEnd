@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.inflationReport.interfaces.rest.resources;
+package com.FinSuma.AhorrArte.platform.inflationReport.interfaces.rest.resources;
 
 import jakarta.annotation.Resource;
 
@@ -47,3 +47,4 @@ public class InflationReportResource {
         this.analysis = analysis;
     }
 }
+

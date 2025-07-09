@@ -1,4 +1,4 @@
-package com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects;
+package com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects;
 
 import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.Email;
@@ -9,4 +9,5 @@ public record EmailAddress(@Email String address) {
         this(null);
     }
 }
+
 

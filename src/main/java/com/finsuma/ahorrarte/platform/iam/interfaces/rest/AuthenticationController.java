@@ -1,14 +1,14 @@
-package com.finsuma.ahorrarte.platform.iam.interfaces.rest;
+package com.FinSuma.AhorrArte.platform.iam.interfaces.rest;
 
-import com.finsuma.ahorrarte.platform.iam.domain.services.UserCommandService;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.AuthenticatedUserResource;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.SignInResource;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.SignUpResource;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.UserResource;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform.AuthenticatedUserResourceFromEntityAssembler;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform.SignInCommandFromResourceAssembler;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform.SignUpCommandFromResourceAssembler;
-import com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
+import com.FinSuma.AhorrArte.platform.iam.domain.services.UserCommandService;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.AuthenticatedUserResource;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.SignInResource;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.SignUpResource;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.UserResource;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform.AuthenticatedUserResourceFromEntityAssembler;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform.SignInCommandFromResourceAssembler;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform.SignUpCommandFromResourceAssembler;
+import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -83,3 +83,4 @@ public class AuthenticationController {
 
     }
 }
+
