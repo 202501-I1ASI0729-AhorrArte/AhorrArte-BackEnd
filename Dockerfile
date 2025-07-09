@@ -1,5 +1,5 @@
-# Use Maven image for build stage
-FROM maven:3.9.5-openjdk-23-slim AS build
+# Use Maven image for build stage (using Java 21 which is LTS and widely supported)
+FROM maven:3.9.5-openjdk-21-slim AS build
 
 # Set working directory
 WORKDIR /app
@@ -16,8 +16,8 @@ COPY src ./src
 # Build the application
 RUN mvn clean package -DskipTests -B
 
-# Use OpenJDK for runtime
-FROM openjdk:23-jdk-slim
+# Use OpenJDK for runtime (using Java 21 LTS)
+FROM openjdk:21-jdk-slim
 
 # Set working directory
 WORKDIR /app
