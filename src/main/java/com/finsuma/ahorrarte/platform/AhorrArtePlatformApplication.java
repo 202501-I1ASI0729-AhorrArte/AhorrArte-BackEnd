@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform;
+package com.finsuma.ahorrarte.platform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
