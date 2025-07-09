@@ -108,6 +108,8 @@ public class WebSecurityConfiguration {
             return cors;
         }));
         http.csrf(csrfConfigurer -> csrfConfigurer.disable())
+                .formLogin(formLogin -> formLogin.disable())
+                .httpBasic(httpBasic -> httpBasic.disable())
                 .exceptionHandling(exceptionHandling -> exceptionHandling.authenticationEntryPoint(unauthorizedRequestHandler))
                 .sessionManagement( customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
@@ -121,7 +123,10 @@ public class WebSecurityConfiguration {
                                 "/actuator/**",
                                 "/api/v1/financial-data/**",
                                 "/api/v1/financial-education/**",
-                                "/api/v1/inflation-report/**").permitAll()
+                                "/api/v1/inflation-report/**",
+                                "/",
+                                "/error",
+                                "/favicon.ico").permitAll()
                         .requestMatchers("/api/v1/user-context/**").authenticated()
                         .requestMatchers("/api/v1/user-transaction/**").authenticated()
                         .requestMatchers("/api/v1/user-inflation/**").authenticated()
