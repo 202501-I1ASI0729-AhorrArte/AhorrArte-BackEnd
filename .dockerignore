@@ -1,11 +1,12 @@
 # Ignore files that shouldn't be included in Docker image
 target/
-!target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar
 .git
 .gitignore
 README.md
 README.md.txt
-.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+.mvn/
 *.log
 *.tmp
 .idea/
