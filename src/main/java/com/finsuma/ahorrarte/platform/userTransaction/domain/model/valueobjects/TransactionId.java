@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.userTransaction.domain.model.valueobjects;
+package com.finsuma.ahorrarte.platform.userTransaction.domain.model.valueobjects;
 
 import java.util.UUID;
 
@@ -17,4 +17,3 @@ public class TransactionId {
         return id;
     }
 }
-

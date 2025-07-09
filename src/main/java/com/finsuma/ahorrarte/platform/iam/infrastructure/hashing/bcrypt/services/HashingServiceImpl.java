@@ -1,6 +1,6 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.hashing.bcrypt.services;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.hashing.bcrypt.services;
 
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -36,4 +36,3 @@ public class HashingServiceImpl implements BCryptHashingService {
         return passwordEncoder.matches(rawPassword, encodedPassword);
     }
 }
-

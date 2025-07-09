@@ -1,9 +1,9 @@
-package com.FinSuma.AhorrArte.platform.iam.interfaces.rest;
+package com.finsuma.ahorrarte.platform.iam.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetAllRolesQuery;
-import com.FinSuma.AhorrArte.platform.iam.domain.services.RoleQueryService;
-import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.RoleResource;
-import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform.RoleResourceFromEntityAssembler;
+import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetAllRolesQuery;
+import com.finsuma.ahorrarte.platform.iam.domain.services.RoleQueryService;
+import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.RoleResource;
+import com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform.RoleResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -21,7 +21,7 @@ import java.util.List;
  *  This controller is responsible for handling all the requests related to roles
  */
 @RestController
-@RequestMapping(value = "/api/v1/roles", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/ap/v1/roles", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Roles", description = "Available Role Endpoints")
 public class RolesController {
     private final RoleQueryService roleQueryService;
@@ -47,4 +47,3 @@ public class RolesController {
         return ResponseEntity.ok(roleResources);
     }
 }
-

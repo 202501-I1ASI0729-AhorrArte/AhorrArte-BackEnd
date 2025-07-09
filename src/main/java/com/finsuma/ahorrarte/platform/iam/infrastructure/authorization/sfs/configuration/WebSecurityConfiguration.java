@@ -1,8 +1,8 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.configuration;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.configuration;
 
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.pipeline.BearerAuthorizationRequestFilter;
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.tokens.jwt.BearerTokenService;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.pipeline.BearerAuthorizationRequestFilter;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.hashing.bcrypt.BCryptHashingService;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.tokens.jwt.BearerTokenService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -92,24 +92,14 @@ public class WebSecurityConfiguration {
      */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.cors(configurer -> configurer.configurationSource(request -> {
+        http.cors(configurer -> configurer.configurationSource(_ -> {
             var cors = new CorsConfiguration();
-            // Get allowed origins from environment variable, fallback to localhost for development
-            String allowedOrigins = System.getenv("CORS_ALLOWED_ORIGINS");
-            if (allowedOrigins != null && !allowedOrigins.isEmpty()) {
-                cors.setAllowedOrigins(List.of(allowedOrigins.split(",")));
-            } else {
-                // Development fallback
-                cors.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:3000"));
-            }
-            cors.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+            cors.setAllowedOrigins(List.of("*"));
+            cors.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
             cors.setAllowedHeaders(List.of("*"));
-            cors.setAllowCredentials(true);
             return cors;
         }));
         http.csrf(csrfConfigurer -> csrfConfigurer.disable())
-                .formLogin(formLogin -> formLogin.disable())
-                .httpBasic(httpBasic -> httpBasic.disable())
                 .exceptionHandling(exceptionHandling -> exceptionHandling.authenticationEntryPoint(unauthorizedRequestHandler))
                 .sessionManagement( customizer -> customizer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
@@ -119,16 +109,8 @@ public class WebSecurityConfiguration {
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/swagger-resources/**",
-                                "/webjars/**",
-                                "/actuator/**",
-                                "/api/v1/financial-data/**",
-                                "/api/v1/financial-education/**",
-                                "/api/v1/inflation-report/**",
-                                "/",
-                                "/error",
-                                "/favicon.ico",
-                                "/**").permitAll()
-                        .anyRequest().permitAll());
+                                "/webjars/**").permitAll()
+                        .anyRequest().authenticated());
         http.authenticationProvider(authenticationProvider());
         http.addFilterBefore(authorizationRequestFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
@@ -149,4 +131,3 @@ public class WebSecurityConfiguration {
         this.unauthorizedRequestHandler = authenticationEntryPoint;
     }
 }
-

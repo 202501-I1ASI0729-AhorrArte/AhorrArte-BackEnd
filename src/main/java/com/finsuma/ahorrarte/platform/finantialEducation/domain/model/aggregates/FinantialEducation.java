@@ -1,8 +1,8 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.aggregates;
+package com.finsuma.ahorrarte.platform.finantialEducation.domain.model.aggregates;
 
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Preguntas;
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Respuestas;
-import com.FinSuma.AhorrArte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Preguntas;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Respuestas;
+import com.finsuma.ahorrarte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
 import jakarta.persistence.*;
 
 @Entity
@@ -49,4 +49,3 @@ public class FinantialEducation extends AuditableAbstractAggregateRoot {
 
     public void setRespuesta(Respuestas respuesta) { this.respuesta = respuesta; }
 }
-

@@ -1,12 +1,12 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest;
+package com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.commandservices.FinantialEducationCommandService;
-import com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.queryservices.FinantialEducationQueryService;
-import com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.queryservices.PreguntasQueryService;
-import com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.queryservices.RespuestasQueryService;
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Preguntas;
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Respuestas;
+import com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.commandservices.FinantialEducationCommandService;
+import com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.queryservices.FinantialEducationQueryService;
+import com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.queryservices.PreguntasQueryService;
+import com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.queryservices.RespuestasQueryService;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Preguntas;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Respuestas;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -75,4 +75,3 @@ public class FinantialEducationController {
         return ResponseEntity.notFound().build();
     }
 }
-

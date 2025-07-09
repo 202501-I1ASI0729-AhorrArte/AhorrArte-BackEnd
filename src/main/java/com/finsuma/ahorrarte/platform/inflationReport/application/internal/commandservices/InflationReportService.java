@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.inflationReport.application.internal.commandservices;
+package com.finsuma.ahorrarte.platform.inflationReport.application.internal.commandservices;
 
-import com.FinSuma.AhorrArte.platform.inflationReport.domain.model.InflationReport;
-import com.FinSuma.AhorrArte.platform.inflationReport.infrastructure.persistence.jpa.InflationReportRepository;
+import com.finsuma.ahorrarte.platform.inflationReport.domain.model.InflationReport;
+import com.finsuma.ahorrarte.platform.inflationReport.infrastructure.persistence.jpa.InflationReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,4 +40,3 @@ public class InflationReportService {
         repository.deleteById(id);
     }
 }
-

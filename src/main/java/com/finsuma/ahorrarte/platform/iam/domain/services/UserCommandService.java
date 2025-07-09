@@ -1,8 +1,8 @@
-package com.FinSuma.AhorrArte.platform.iam.domain.services;
+package com.finsuma.ahorrarte.platform.iam.domain.services;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates.User;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignInCommand;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignUpCommand;
+import com.finsuma.ahorrarte.platform.iam.domain.model.aggregates.User;
+import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignInCommand;
+import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignUpCommand;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import java.util.Optional;
@@ -12,4 +12,3 @@ public interface UserCommandService {
     Optional<User> handle(SignUpCommand command);
     Optional<ImmutablePair<User, String>> handle(SignInCommand command);
 }
-

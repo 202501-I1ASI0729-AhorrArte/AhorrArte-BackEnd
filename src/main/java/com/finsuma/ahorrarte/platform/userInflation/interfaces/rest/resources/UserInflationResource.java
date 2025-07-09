@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.userInflation.interfaces.rest.resources;
+package com.finsuma.ahorrarte.platform.userInflation.interfaces.rest.resources;
 
 public class UserInflationResource {
 
@@ -29,4 +29,3 @@ public class UserInflationResource {
         this.reportId = reportId;
     }
 }
-

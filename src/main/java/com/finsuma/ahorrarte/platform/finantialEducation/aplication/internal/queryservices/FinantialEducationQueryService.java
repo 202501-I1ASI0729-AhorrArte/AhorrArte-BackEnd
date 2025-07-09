@@ -1,9 +1,9 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.queryservices;
+package com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.queryservices;
 
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Preguntas;
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Respuestas;
-import com.FinSuma.AhorrArte.platform.finantialEducation.infrastructure.persistence.jpa.FinantialEducationRepository;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.aggregates.FinantialEducation;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Preguntas;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Respuestas;
+import com.finsuma.ahorrarte.platform.finantialEducation.infrastructure.persistence.jpa.FinantialEducationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,4 +40,3 @@ public class FinantialEducationQueryService {
         return respuestasQueryService.findById(respuestaId);
     }
 }
-

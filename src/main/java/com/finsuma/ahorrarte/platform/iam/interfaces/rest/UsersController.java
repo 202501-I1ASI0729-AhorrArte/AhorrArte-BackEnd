@@ -1,10 +1,10 @@
-package com.FinSuma.AhorrArte.platform.iam.interfaces.rest;
+package com.finsuma.ahorrarte.platform.iam.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetAllUsersQuery;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetUserByIdQuery;
-import com.FinSuma.AhorrArte.platform.iam.domain.services.UserQueryService;
-import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.resources.UserResource;
-import com.FinSuma.AhorrArte.platform.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
+import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetAllUsersQuery;
+import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetUserByIdQuery;
+import com.finsuma.ahorrarte.platform.iam.domain.services.UserQueryService;
+import com.finsuma.ahorrarte.platform.iam.interfaces.rest.resources.UserResource;
+import com.finsuma.ahorrarte.platform.iam.interfaces.rest.transform.UserResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -74,4 +74,3 @@ public class UsersController {
         return ResponseEntity.ok(userResource);
     }
 }
-

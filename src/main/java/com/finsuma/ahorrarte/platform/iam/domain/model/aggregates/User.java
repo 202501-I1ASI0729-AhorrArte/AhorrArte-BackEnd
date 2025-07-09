@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates;
+package com.finsuma.ahorrarte.platform.iam.domain.model.aggregates;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
-import com.FinSuma.AhorrArte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
+import com.finsuma.ahorrarte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -54,25 +54,22 @@ public class User extends AuditableAbstractAggregateRoot<User> {
         return this;
     }
 
-    public User() { 
-        this.roles = new HashSet<>(); 
+    public List<Role> getRolesList() {
+        return new java.util.ArrayList<>(this.roles);
     }
 
-    // Additional getters for compatibility
+    public User() { this.roles = new HashSet<>(); }
+
+    // Métodos explícitos para resolver problemas de compilación
     public String getUsername() {
-        return username;
+        return this.username;
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public Set<Role> getRoles() {
-        return roles;
-    }
-    
-    public Long getId() {
-        return id;
+        return this.roles;
     }
 }
-

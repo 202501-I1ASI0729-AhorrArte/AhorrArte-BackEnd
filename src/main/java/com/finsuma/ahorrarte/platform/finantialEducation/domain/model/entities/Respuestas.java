@@ -1,6 +1,6 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities;
+package com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities;
 
-import com.FinSuma.AhorrArte.platform.shared.domain.model.entities.AuditableModel;
+import com.finsuma.ahorrarte.platform.shared.domain.model.entities.AuditableModel;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -45,4 +45,3 @@ public class Respuestas extends AuditableModel {
         this.pregunta = pregunta;
     }
 }
-

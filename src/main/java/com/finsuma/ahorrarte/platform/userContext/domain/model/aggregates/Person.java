@@ -1,10 +1,10 @@
-package com.FinSuma.AhorrArte.platform.userContext.domain.model.aggregates;
+package com.finsuma.ahorrarte.platform.userContext.domain.model.aggregates;
 
-import com.FinSuma.AhorrArte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.commands.CreatePersonCommand;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects.EmailAddress;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects.PersonName;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects.StreetAddress;
+import com.finsuma.ahorrarte.platform.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.commands.CreatePersonCommand;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects.EmailAddress;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects.PersonName;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects.StreetAddress;
 import jakarta.persistence.*;
 
 @Entity
@@ -99,4 +99,3 @@ public class Person extends AuditableAbstractAggregateRoot<Person> {
 
 
 }
-

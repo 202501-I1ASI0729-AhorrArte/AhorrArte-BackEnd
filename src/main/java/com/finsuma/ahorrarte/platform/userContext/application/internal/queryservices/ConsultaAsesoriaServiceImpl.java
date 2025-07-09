@@ -1,10 +1,10 @@
-package com.FinSuma.AhorrArte.platform.userContext.application.internal.queryservices;
+package com.finsuma.ahorrarte.platform.userContext.application.internal.queryservices;
 
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.entities.ConsultaAsesoria;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.queries.GetAllConsultasAsesoriasQuery;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.queries.GetConsultaAsesoriaByIdQuery;
-import com.FinSuma.AhorrArte.platform.userContext.domain.services.ConsultaAsesoriaQueryService;
-import com.FinSuma.AhorrArte.platform.userContext.infrastructure.persistence.jpa.repositories.ConsultaAsesoriaRepository;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.entities.ConsultaAsesoria;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.queries.GetAllConsultasAsesoriasQuery;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.queries.GetConsultaAsesoriaByIdQuery;
+import com.finsuma.ahorrarte.platform.userContext.domain.services.ConsultaAsesoriaQueryService;
+import com.finsuma.ahorrarte.platform.userContext.infrastructure.persistence.jpa.repositories.ConsultaAsesoriaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,4 +30,3 @@ public class ConsultaAsesoriaServiceImpl implements ConsultaAsesoriaQueryService
     }
 
 }
-

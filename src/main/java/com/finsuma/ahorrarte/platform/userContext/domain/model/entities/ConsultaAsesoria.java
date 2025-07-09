@@ -1,6 +1,6 @@
-package com.FinSuma.AhorrArte.platform.userContext.domain.model.entities;
+package com.finsuma.ahorrarte.platform.userContext.domain.model.entities;
 
-import com.FinSuma.AhorrArte.platform.shared.domain.model.entities.AuditableModel;
+import com.finsuma.ahorrarte.platform.shared.domain.model.entities.AuditableModel;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -54,4 +54,3 @@ public class ConsultaAsesoria extends AuditableModel {
         this.resultado = resultado;
     }
 }
-

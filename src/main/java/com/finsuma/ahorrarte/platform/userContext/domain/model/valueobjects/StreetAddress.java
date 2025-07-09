@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects;
+package com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects;
 
 import jakarta.persistence.Embeddable;
 
@@ -24,4 +24,3 @@ public record StreetAddress(
         if (number == null || number.isBlank()) throw new IllegalArgumentException("Number must not be null or blank");
     }
 }
-

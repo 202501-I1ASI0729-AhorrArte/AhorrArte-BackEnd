@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.model;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates.User;
+import com.finsuma.ahorrarte.platform.iam.domain.model.aggregates.User;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
@@ -81,4 +81,3 @@ public class UserDetailsImpl implements UserDetails {
         return enabled;
     }
 }
-

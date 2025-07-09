@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.iam.application.internal.eventhanders;
+package com.finsuma.ahorrarte.platform.iam.application.internal.eventhanders;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SeedRolesCommand;
-import com.FinSuma.AhorrArte.platform.iam.domain.services.RoleCommandService;
+import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SeedRolesCommand;
+import com.finsuma.ahorrarte.platform.iam.domain.services.RoleCommandService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -32,4 +32,3 @@ public class ApplicationReadyEventHandler {
                 applicationName, new Timestamp(System.currentTimeMillis()));
     }
 }
-

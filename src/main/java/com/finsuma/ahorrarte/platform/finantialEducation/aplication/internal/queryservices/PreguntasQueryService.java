@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.aplication.internal.queryservices;
+package com.finsuma.ahorrarte.platform.finantialEducation.aplication.internal.queryservices;
 
-import com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities.Preguntas;
-import com.FinSuma.AhorrArte.platform.finantialEducation.infrastructure.persistence.jpa.PreguntasRepository;
+import com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities.Preguntas;
+import com.finsuma.ahorrarte.platform.finantialEducation.infrastructure.persistence.jpa.PreguntasRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,4 +24,3 @@ public class PreguntasQueryService {
         return repository.findById(id);
     }
 }
-

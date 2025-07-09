@@ -1,13 +1,13 @@
-package com.FinSuma.AhorrArte.platform.userContext.interfaces.rest;
+package com.finsuma.ahorrarte.platform.userContext.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.queries.GetAllPersonsQuery;
-import com.FinSuma.AhorrArte.platform.userContext.domain.model.queries.GetPersonByIdQuery;
-import com.FinSuma.AhorrArte.platform.userContext.domain.services.PersonCommandService;
-import com.FinSuma.AhorrArte.platform.userContext.domain.services.PersonQueryService;
-import com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.resources.CreatePersonResource;
-import com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.resources.PersonResource;
-import com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.transform.CreatePersonCommandFromResourceAssembler;
-import com.FinSuma.AhorrArte.platform.userContext.interfaces.rest.transform.PersonResourceFromEntityAssembler;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.queries.GetAllPersonsQuery;
+import com.finsuma.ahorrarte.platform.userContext.domain.model.queries.GetPersonByIdQuery;
+import com.finsuma.ahorrarte.platform.userContext.domain.services.PersonCommandService;
+import com.finsuma.ahorrarte.platform.userContext.domain.services.PersonQueryService;
+import com.finsuma.ahorrarte.platform.userContext.interfaces.rest.resources.CreatePersonResource;
+import com.finsuma.ahorrarte.platform.userContext.interfaces.rest.resources.PersonResource;
+import com.finsuma.ahorrarte.platform.userContext.interfaces.rest.transform.CreatePersonCommandFromResourceAssembler;
+import com.finsuma.ahorrarte.platform.userContext.interfaces.rest.transform.PersonResourceFromEntityAssembler;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -58,4 +58,3 @@ public class PersonController {
 
 
 }
-

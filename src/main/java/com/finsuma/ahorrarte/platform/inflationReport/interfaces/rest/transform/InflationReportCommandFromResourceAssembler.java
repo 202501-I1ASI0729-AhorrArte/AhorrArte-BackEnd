@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.inflationReport.interfaces.rest.transform;
+package com.finsuma.ahorrarte.platform.inflationReport.interfaces.rest.transform;
 
-import com.FinSuma.AhorrArte.platform.inflationReport.domain.model.InflationReport;
-import com.FinSuma.AhorrArte.platform.inflationReport.interfaces.rest.resources.InflationReportResource;
+import com.finsuma.ahorrarte.platform.inflationReport.domain.model.InflationReport;
+import com.finsuma.ahorrarte.platform.inflationReport.interfaces.rest.resources.InflationReportResource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,4 +16,3 @@ public class InflationReportCommandFromResourceAssembler {
         return inflationReport;
     }
 }
-

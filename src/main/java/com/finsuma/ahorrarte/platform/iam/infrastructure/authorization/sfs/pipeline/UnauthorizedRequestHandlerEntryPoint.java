@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.authorization.sfs.pipeline;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.authorization.sfs.pipeline;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -38,4 +38,3 @@ public class UnauthorizedRequestHandlerEntryPoint implements AuthenticationEntry
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized request detected");
     }
 }
-

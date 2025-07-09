@@ -1,11 +1,11 @@
-package com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest;
+package com.finsuma.ahorrarte.platform.finantialData.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.finantialData.application.internal.commandservices.FinantialDataCommandService;
-import com.FinSuma.AhorrArte.platform.finantialData.application.internal.queryservices.FinantialDataQueryService;
-import com.FinSuma.AhorrArte.platform.finantialData.domain.model.FinantialData;
-import com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest.resources.FinantialDataResource;
-import com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest.transform.CreateFinantialDataCommandFromResourceAssembler;
-import com.FinSuma.AhorrArte.platform.finantialData.interfaces.rest.transform.FinantialDataResourceFromEntityAssembler;
+import com.finsuma.ahorrarte.platform.finantialData.application.internal.commandservices.FinantialDataCommandService;
+import com.finsuma.ahorrarte.platform.finantialData.application.internal.queryservices.FinantialDataQueryService;
+import com.finsuma.ahorrarte.platform.finantialData.domain.model.FinantialData;
+import com.finsuma.ahorrarte.platform.finantialData.interfaces.rest.resources.FinantialDataResource;
+import com.finsuma.ahorrarte.platform.finantialData.interfaces.rest.transform.CreateFinantialDataCommandFromResourceAssembler;
+import com.finsuma.ahorrarte.platform.finantialData.interfaces.rest.transform.FinantialDataResourceFromEntityAssembler;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -80,4 +80,3 @@ public class FinantialDataController {
         }
     }
 }
-

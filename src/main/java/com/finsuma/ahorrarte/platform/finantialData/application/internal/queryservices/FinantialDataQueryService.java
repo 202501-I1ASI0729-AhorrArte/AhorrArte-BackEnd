@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.finantialData.application.internal.queryservices;
+package com.finsuma.ahorrarte.platform.finantialData.application.internal.queryservices;
 
-import com.FinSuma.AhorrArte.platform.finantialData.domain.model.FinantialData;
-import com.FinSuma.AhorrArte.platform.finantialData.infrastructure.persistence.jpa.FinantialDataRepository;
+import com.finsuma.ahorrarte.platform.finantialData.domain.model.FinantialData;
+import com.finsuma.ahorrarte.platform.finantialData.infrastructure.persistence.jpa.FinantialDataRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,4 +24,3 @@ public class FinantialDataQueryService {
         return repository.findById(id);
     }
 }
-

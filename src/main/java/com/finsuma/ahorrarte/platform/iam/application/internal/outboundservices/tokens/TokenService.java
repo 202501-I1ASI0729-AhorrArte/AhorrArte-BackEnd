@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.iam.application.internal.outboundservices.tokens;
+package com.finsuma.ahorrarte.platform.iam.application.internal.outboundservices.tokens;
 
 /**
  * TokenService interface
@@ -27,4 +27,3 @@ public interface TokenService {
      */
     boolean validateToken(String token);
 }
-

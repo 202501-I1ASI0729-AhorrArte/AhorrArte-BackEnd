@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.userTransaction.application.internal.commandservices;
+package com.finsuma.ahorrarte.platform.userTransaction.application.internal.commandservices;
 
-import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.aggregates.Transaction;
-import com.FinSuma.AhorrArte.platform.userTransaction.infrastructure.persistence.jpa.repositories.TransactionRepository;
+import com.finsuma.ahorrarte.platform.userTransaction.domain.model.aggregates.Transaction;
+import com.finsuma.ahorrarte.platform.userTransaction.infrastructure.persistence.jpa.repositories.TransactionRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,4 +24,3 @@ public class TransactionCommandServiceImpl {
         return transactionRepository.save(transaction);
     }
 }
-

@@ -1,6 +1,6 @@
-package com.FinSuma.AhorrArte.platform.userInflation.interfaces.rest;
+package com.finsuma.ahorrarte.platform.userInflation.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.userInflation.application.internal.commandservices.UserInflationService;
+import com.finsuma.ahorrarte.platform.userInflation.application.internal.commandservices.UserInflationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,4 +26,3 @@ public class UserInflationController {
         return ResponseEntity.noContent().build();
     }
 }
-

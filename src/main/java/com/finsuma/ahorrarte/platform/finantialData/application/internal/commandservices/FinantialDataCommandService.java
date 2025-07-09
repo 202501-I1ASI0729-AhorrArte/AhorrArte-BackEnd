@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.finantialData.application.internal.commandservices;
+package com.finsuma.ahorrarte.platform.finantialData.application.internal.commandservices;
 
-import com.FinSuma.AhorrArte.platform.finantialData.domain.model.FinantialData;
-import com.FinSuma.AhorrArte.platform.finantialData.infrastructure.persistence.jpa.FinantialDataRepository;
+import com.finsuma.ahorrarte.platform.finantialData.domain.model.FinantialData;
+import com.finsuma.ahorrarte.platform.finantialData.infrastructure.persistence.jpa.FinantialDataRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,4 +21,3 @@ public class FinantialDataCommandService {
         repository.deleteById(id);
     }
 }
-

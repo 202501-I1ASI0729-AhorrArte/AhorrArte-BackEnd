@@ -1,6 +1,6 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates.User;
+import com.finsuma.ahorrarte.platform.iam.domain.model.aggregates.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,4 +12,3 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
     boolean existsByUsername(String username);
 }
-

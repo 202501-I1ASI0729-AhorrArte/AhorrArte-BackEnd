@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.valueobjects.Roles;
+import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
+import com.finsuma.ahorrarte.platform.iam.domain.model.valueobjects.Roles;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +13,3 @@ public interface RoleRepository extends JpaRepository<Role, Long> {
     Optional<Role> findByName(Roles name);
     boolean existsByName(Roles name);
 }
-

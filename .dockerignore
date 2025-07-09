@@ -1,40 +1,15 @@
-# Ignore Git files
-.git
-.gitignore
-
-# Ignore IDE files
-.vscode/
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# Ignore OS files
-.DS_Store
-Thumbs.db
-
-# Ignore build outputs
+# Ignore files that shouldn't be included in Docker image
 target/
 !target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar
-
-# Ignore logs
-*.log
-
-# Ignore temporary files
-*.tmp
-*.temp
-
-# Ignore documentation
+.git
+.gitignore
 README.md
-docs/
-
-# Ignore Maven local repository
-.m2/
-
-# Ignore Node modules if any
-node_modules/
-
-# Ignore environment files
-.env
-.env.local
-.env.production
+README.md.txt
+.mvn/wrapper/maven-wrapper.jar
+*.log
+*.tmp
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

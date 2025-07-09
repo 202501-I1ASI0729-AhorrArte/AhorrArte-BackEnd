@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.inflationReport.domain.model;
+package com.finsuma.ahorrarte.platform.inflationReport.domain.model;
 
 import jakarta.persistence.*;
 
@@ -55,4 +55,3 @@ public class InflationReport {
         this.analysis = analysis;
     }
 }
-

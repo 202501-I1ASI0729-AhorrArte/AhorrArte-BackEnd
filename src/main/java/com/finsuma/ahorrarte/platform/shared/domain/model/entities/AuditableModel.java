@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.shared.domain.model.entities;
+package com.finsuma.ahorrarte.platform.shared.domain.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -25,5 +25,4 @@ public class AuditableModel {
     @Column(nullable = true)
     private Date updatedAt;
 }
-
 

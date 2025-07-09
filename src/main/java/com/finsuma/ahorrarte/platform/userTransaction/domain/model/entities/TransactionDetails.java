@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.userTransaction.domain.model.entities;
+package com.finsuma.ahorrarte.platform.userTransaction.domain.model.entities;
 
-import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.valueobjects.TransactionAmount;
-import com.FinSuma.AhorrArte.platform.userTransaction.domain.model.valueobjects.TransactionId;
+import com.finsuma.ahorrarte.platform.userTransaction.domain.model.valueobjects.TransactionAmount;
+import com.finsuma.ahorrarte.platform.userTransaction.domain.model.valueobjects.TransactionId;
 
 import java.util.Date;
 
@@ -42,4 +42,3 @@ public class TransactionDetails {
         return category;
     }
 }
-

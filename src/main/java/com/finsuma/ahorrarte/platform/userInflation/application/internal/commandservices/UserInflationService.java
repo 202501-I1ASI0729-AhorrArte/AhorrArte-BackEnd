@@ -1,8 +1,8 @@
-package com.FinSuma.AhorrArte.platform.userInflation.application.internal.commandservices;
+package com.finsuma.ahorrarte.platform.userInflation.application.internal.commandservices;
 
-import com.FinSuma.AhorrArte.platform.userInflation.domain.model.UserInflation;
-import com.FinSuma.AhorrArte.platform.userInflation.domain.model.UserInflationId;
-import com.FinSuma.AhorrArte.platform.userInflation.infraestructure.persistence.jpa.UserInflationRepository;
+import com.finsuma.ahorrarte.platform.userInflation.domain.model.UserInflation;
+import com.finsuma.ahorrarte.platform.userInflation.domain.model.UserInflationId;
+import com.finsuma.ahorrarte.platform.userInflation.infraestructure.persistence.jpa.UserInflationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +21,3 @@ public class UserInflationService {
         repository.deleteById(new UserInflationId(userId, reportId));
     }
 }
-

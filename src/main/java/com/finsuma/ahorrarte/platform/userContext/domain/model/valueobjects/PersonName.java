@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.userContext.domain.model.valueobjects;
+package com.finsuma.ahorrarte.platform.userContext.domain.model.valueobjects;
 
 import jakarta.persistence.Embeddable;
 
@@ -22,4 +22,3 @@ public record PersonName(String firstName, String lastName) {
 
     }
 }
-

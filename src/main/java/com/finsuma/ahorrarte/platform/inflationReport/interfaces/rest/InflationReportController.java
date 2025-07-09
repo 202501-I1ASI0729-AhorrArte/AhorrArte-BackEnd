@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.inflationReport.interfaces.rest;
+package com.finsuma.ahorrarte.platform.inflationReport.interfaces.rest;
 
-import com.FinSuma.AhorrArte.platform.inflationReport.domain.model.InflationReport;
-import com.FinSuma.AhorrArte.platform.inflationReport.application.internal.commandservices.InflationReportService;
+import com.finsuma.ahorrarte.platform.inflationReport.domain.model.InflationReport;
+import com.finsuma.ahorrarte.platform.inflationReport.application.internal.commandservices.InflationReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,4 +42,3 @@ public class InflationReportController {
         return ResponseEntity.noContent().build();
     }
 }
-

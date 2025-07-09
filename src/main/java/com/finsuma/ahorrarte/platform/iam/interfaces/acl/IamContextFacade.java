@@ -1,11 +1,11 @@
-package com.FinSuma.AhorrArte.platform.iam.interfaces.acl;
+package com.finsuma.ahorrarte.platform.iam.interfaces.acl;
 
-import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignUpCommand;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.entities.Role;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetUserByIdQuery;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.queries.GetUserByUsernameQuery;
-import com.FinSuma.AhorrArte.platform.iam.domain.services.UserCommandService;
-import com.FinSuma.AhorrArte.platform.iam.domain.services.UserQueryService;
+import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignUpCommand;
+import com.finsuma.ahorrarte.platform.iam.domain.model.entities.Role;
+import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetUserByIdQuery;
+import com.finsuma.ahorrarte.platform.iam.domain.model.queries.GetUserByUsernameQuery;
+import com.finsuma.ahorrarte.platform.iam.domain.services.UserCommandService;
+import com.finsuma.ahorrarte.platform.iam.domain.services.UserQueryService;
 import org.apache.logging.log4j.util.Strings;
 
 import java.util.ArrayList;
@@ -82,4 +82,3 @@ public class IamContextFacade {
     }
 
 }
-

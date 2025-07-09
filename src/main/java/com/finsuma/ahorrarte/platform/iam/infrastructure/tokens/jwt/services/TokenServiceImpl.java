@@ -1,6 +1,6 @@
-package com.FinSuma.AhorrArte.platform.iam.infrastructure.tokens.jwt.services;
+package com.finsuma.ahorrarte.platform.iam.infrastructure.tokens.jwt.services;
 
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.tokens.jwt.BearerTokenService;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.tokens.jwt.BearerTokenService;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
@@ -169,4 +169,3 @@ public class TokenServiceImpl implements BearerTokenService {
         return request.getHeader(AUTHORIZATION_PARAMETER_NAME);
     }
 }
-

@@ -1,4 +1,4 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.interfaces.rest.resources;
+package com.finsuma.ahorrarte.platform.finantialEducation.interfaces.rest.resources;
 
 public class FinantialEducationResource {
 
@@ -33,4 +33,3 @@ public class FinantialEducationResource {
 
     public void setRespuesta(RespuestaResource respuesta) { this.respuesta = respuesta; }
 }
-

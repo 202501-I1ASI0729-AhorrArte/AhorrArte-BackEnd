@@ -1,18 +1,17 @@
-package com.FinSuma.AhorrArte.platform.iam.application.internal.commandservices;
+package com.finsuma.ahorrarte.platform.iam.application.internal.commandservices;
 
-import com.FinSuma.AhorrArte.platform.iam.application.internal.outboundservices.hashingService.HashingService;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.aggregates.User;
-import com.FinSuma.AhorrArte.platform.iam.domain.services.UserCommandService;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignInCommand;
-import com.FinSuma.AhorrArte.platform.iam.domain.model.commands.SignUpCommand;
-import com.FinSuma.AhorrArte.platform.iam.application.internal.outboundservices.tokens.TokenService;
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories.RoleRepository;
-import com.FinSuma.AhorrArte.platform.iam.infrastructure.persistence.jpa.repositories.UserRepository;
+import com.finsuma.ahorrarte.platform.iam.application.internal.outboundservices.hashingService.HashingService;
+import com.finsuma.ahorrarte.platform.iam.domain.model.aggregates.User;
+import com.finsuma.ahorrarte.platform.iam.domain.services.UserCommandService;
+import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignInCommand;
+import com.finsuma.ahorrarte.platform.iam.domain.model.commands.SignUpCommand;
+import com.finsuma.ahorrarte.platform.iam.application.internal.outboundservices.tokens.TokenService;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories.RoleRepository;
+import com.finsuma.ahorrarte.platform.iam.infrastructure.persistence.jpa.repositories.UserRepository;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class UserCommandServiceImpl implements UserCommandService {
@@ -36,7 +35,7 @@ public class UserCommandServiceImpl implements UserCommandService {
         }
         var roles = command.roles().stream().map(
                 role -> roleRepository.findByName(role.getName()).orElseThrow(
-                        () -> new RuntimeException("Role name not found"))).collect(Collectors.toList());
+                        () -> new RuntimeException("Role name not found"))).collect(java.util.stream.Collectors.toList());
 
         var user = new User(command.username(), hashingService.encode(command.password()), roles);
 
@@ -55,4 +54,3 @@ public class UserCommandServiceImpl implements UserCommandService {
         return Optional.of(ImmutablePair.of(user.get(), token));
     }
 }
-

@@ -1,7 +1,7 @@
-package com.FinSuma.AhorrArte.platform.finantialEducation.domain.model.entities;
+package com.finsuma.ahorrarte.platform.finantialEducation.domain.model.entities;
 
 
-import com.FinSuma.AhorrArte.platform.shared.domain.model.entities.AuditableModel;
+import com.finsuma.ahorrarte.platform.shared.domain.model.entities.AuditableModel;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -38,4 +38,3 @@ public class Preguntas extends AuditableModel {
     }
 
 }
-
