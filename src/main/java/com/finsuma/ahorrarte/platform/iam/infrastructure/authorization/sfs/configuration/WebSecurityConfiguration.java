@@ -118,8 +118,14 @@ public class WebSecurityConfiguration {
                                 "/swagger-ui/**",
                                 "/swagger-resources/**",
                                 "/webjars/**",
-                                "/actuator/**").permitAll()
-                        .anyRequest().authenticated());
+                                "/actuator/**",
+                                "/api/v1/financial-data/**",
+                                "/api/v1/financial-education/**",
+                                "/api/v1/inflation-report/**").permitAll()
+                        .requestMatchers("/api/v1/user-context/**").authenticated()
+                        .requestMatchers("/api/v1/user-transaction/**").authenticated()
+                        .requestMatchers("/api/v1/user-inflation/**").authenticated()
+                        .anyRequest().permitAll());
         http.authenticationProvider(authenticationProvider());
         http.addFilterBefore(authorizationRequestFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
