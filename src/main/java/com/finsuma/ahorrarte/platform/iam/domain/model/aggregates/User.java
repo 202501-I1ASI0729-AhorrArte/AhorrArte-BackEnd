@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@Table(name = "users") // Avoid PostgreSQL reserved word "user"
 @Getter
 @Setter
 public class User extends AuditableAbstractAggregateRoot<User> {
