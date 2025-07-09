@@ -25,11 +25,20 @@ WORKDIR /app
 # Copy the built jar from build stage
 COPY --from=build /app/target/AhorrArte-Platform-0.0.1-SNAPSHOT.jar app.jar
 
+# Copy startup script
+COPY start.sh start.sh
+RUN chmod +x start.sh
+
 # Expose port (Render will assign a port, but this is for documentation)
 EXPOSE 8080
 
 # Set default Java options (can be overridden by environment variable)
 ENV JAVA_OPTS="-Xmx512m -Xms256m -XX:+UseG1GC -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
 
-# Run the application with Java options
-CMD ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+# Create a non-root user for security
+RUN addgroup --system spring && adduser --system spring --ingroup spring
+RUN chown spring:spring app.jar start.sh
+USER spring:spring
+
+# Run the application using the startup script
+CMD ["./start.sh"]
